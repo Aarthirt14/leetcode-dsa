@@ -8,8 +8,8 @@ class Solution:
             num=nums[i]
             old_max = current_max
             old_min = current_min
-            current_max=max(nums[i],current_max*nums[i],old_min*num)
-            current_min=min(nums[i],current_min*nums[i],old_max*num)
+            current_max = max(num, old_max * num, old_min * num)
+            current_min = min(num, old_max * num, old_min * num)
             best=max(current_max,best)
 
         return best
