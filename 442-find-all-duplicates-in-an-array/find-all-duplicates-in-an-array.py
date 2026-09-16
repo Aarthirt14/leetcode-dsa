@@ -4,8 +4,8 @@ class Solution:
         frequency={}
         for x in nums:
             frequency[x]=frequency.get(x,0)+1
-        for x in nums:
-            if frequency[x] > 1 :
+        for x, count in frequency.items():
+            if count > 1:
                 output.append(x)
-        output= set(output)
-        return list(output)
+
+        return output
